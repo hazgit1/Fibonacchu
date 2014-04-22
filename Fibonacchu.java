@@ -25,17 +25,26 @@ public class Fibonacchu {
         System.out.print("Masukkan angka ajaib : ");
         n = s.nextInt();
         
-        System.out.print("\n\n1 1 ");
-        while (n > 2){
+        
+        int h[] = new int[n];
+        
+        //System.out.print("\n\n1 1 ");
+        for (int i=2; i<n; ++i){
             c = a+b;
-            System.out.print(c+" ");
+            
+            h[i] = c;
             
             a=b; b=c;
             
             sum+=c;
+        }
+        while (n > 2){
+            System.out.print(h[n-1]+" ");
             
             n--;
         }
+        
+        System.out.print("1 1");
         System.out.println("\nTotal = "+(sum+2));
         System.out.println("\nchuu~");
         
